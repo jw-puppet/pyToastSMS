@@ -1,0 +1,33 @@
+"""
+API Implementation configs
+
+"""
+
+version: "v2.0"
+host: "https://api-sms.cloud.toast.com"
+path_prefix: "/sms"
+content_type: "application/json;charset=UTF-8"
+
+# 문자 내용 길이
+sms_body_limit: 90
+mms_body_limit: 2000
+
+# 전송된 SMS 목록
+list_sent_sms:
+    method: "GET"
+    path: "/sender/sms"
+
+# SMS 전송
+send_sms:
+    method: "POST"
+    path: "/sender/sms"
+
+# MMS 전송
+send_mms:
+    method: "POST"
+    path: "/sender/mms"
+
+# 등록된 발신번호 목록
+list_send_nos:
+    method: "GET"
+    path: "/sendNos"

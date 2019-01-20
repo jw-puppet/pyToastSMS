@@ -1,0 +1,223 @@
+"""
+Toast SMS status Code & Message Mapping. (Not Implemented all code.)
+full document here... https://docs.toast.com/ko/Notification/SMS/ko/error-code/
+"""
+API_RESPONSE_CODE:
+  resultCode:
+      0:
+          service: 'generic'
+          isSuccess: True
+          resultMessage: '성공'
+      -1000:
+          service: 'generic'
+          isSuccess: False
+          resultMessage: '유효하지 않은 appKey'
+      -1001:
+          service: 'generic'
+          isSuccess: False
+          resultMessage: '존재하지 않는 appKey'
+      -1002:
+          service: 'generic'
+          isSuccess: False
+          resultMessage: '사용 종료된 appKey'
+      -1003:
+          service: 'generic'
+          isSuccess: False
+          resultMessage: '프로젝트에 포함되지 않는 멤버'
+      -1004:
+          service: 'generic'
+          isSuccess: False
+          resultMessage: '허용되지 않는 아이피'
+      -1006:
+          service: 'generic'
+          isSuccess: False
+          resultMessage: '유효하지 않는 발송 메세지(messageType) 타입'
+      -2000:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '유효하지 않는 날짜 포맷'
+      -2001:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '수신자가 비어있음'
+      -2002:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '첨부파일 이름이 유효하지 않음'
+      -2003:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '첨부파일 확장자가 jpg jpeg 가 아님'
+      -2004:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '첨부파일이 존재하지 않음'
+      -2005:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '첨부파일 사이즈가 300KB를 초과함'
+      -2006:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '템플릿에 설정된 발송 타입과 요청 온 발송 타입이 일치하지 않음'
+      -2008:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '요청 아이디(requestId)가 잘못됨'
+      -2009:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '첨부파일 업로드 중 서버에러로 인해 정상적으로 업로드 되지 않음'
+      -2010:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '첨부파일 업로드 타입이 잘못됨(서버에러)'
+      -2011:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '필수조회 파라미터가 비어있음 (check "requestId" "startRequestDate" "end1Requestdate")'
+      -2012:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '상세조회 파라미터가 잘못됨(requestId 또는 mtPr)'
+      -2014:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '제목 또는 본문이 비어있음'
+      -2016:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '수신자가 1000명이 넘어감'
+      -2017:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '엑셀 생성 실패'
+      -2018:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '수신자 번호가 비어있음'
+      -2019:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '수신자 번호가 유효하지 않음'
+      -2021:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '시스템 에러(큐 저장 실패)'
+      -2100:
+          service: 'template'
+          isSuccess: False
+          resultMessage: '템플릿 아이디가 비어있음'
+      -2101:
+          service: 'template'
+          isSuccess: False
+          resultMessage: '이미 등록된 템플릿 아이디'
+      -2102:
+          service: 'template'
+          isSuccess: False
+          resultMessage: '템플릿 이름이 비어있음'
+      -2103:
+          service: 'template'
+          isSuccess: False
+          resultMessage: '발신 번호가 비어있음'
+      -2104:
+          service: 'template'
+          isSuccess: False
+          resultMessage: '발송 타입이 비어있음(0-sms 1-mms 2-auth)'
+      -2105:
+          service: 'template'
+          isSuccess: False
+          resultMessage: '본문이 비어있음'
+      -2106:
+          service: 'template'
+          isSuccess: False
+          resultMessage: '사용 여부가 잘못됨'
+      -2107:
+          service: 'template'
+          isSuccess: False
+          resultMessage: '유효하지 않는 템플릿 아이디(수정/삭제 시)'
+      -2108:
+          service: 'template'
+          isSuccess: False
+          resultMessage: '카테고리 아이디가 비어있음'
+      -2109:
+          service: 'template'
+          isSuccess: False
+          resultMessage: '템플릿 아이디가 10글자를 초과함'
+      -2110:
+          service: 'template'
+          isSuccess: False
+          resultMessage: '템플릿이 존재하지 않음'
+      -2200:
+          service: 'category'
+          isSuccess: False
+          resultMessage: '카테고리 등록 실패 - 유효하지 않는 카테고리'
+      -2201:
+          service: 'category'
+          isSuccess: False
+          resultMessage: '카테고리 수정 실패 - 유효하지 않는 카테고리'
+      -2202:
+          service: 'category'
+          isSuccess: False
+          resultMessage: '카테고리 조회 실패 - 유효하지 않는 카테고리'
+      -2312:
+          service: 'sendNo'
+          isSuccess: False
+          resultMessage: '등록되지 않은 발신번호'
+      -2313:
+          service: 'sendNo'
+          isSuccess: False
+          resultMessage: '차단된 발신 번호'
+      -2314:
+          service: 'sendNo'
+          isSuccess: False
+          resultMessage: '발신번호 등록 요청 파라미터가 유효하지 않음'
+      -2700:
+          service: 'statistics'
+          isSuccess: False
+          resultMessage: '유효하지 않는 통계 범위'
+      -2701:
+          service: 'statistics'
+          isSuccess: False
+          resultMessage: '유효하지 않는 통계 검색 파라미터'
+      -2702:
+          service: 'statistics'
+          isSuccess: False
+          resultMessage: '유효하지 않는 통계 세부 범위'
+      -4000:
+          service: 'send/inquiry'
+          isSuccess: False
+          resultMessage: '조회범위가 1달을 넘음'
+      -6000:
+          service: '080deny'
+          isSuccess: False
+          resultMessage: '수신 거부 기능을 사용하고 있지 않음'
+      -6001:
+          service: '080deny'
+          isSuccess: False
+          resultMessage: '수신 거부된 번호'
+      -6002:
+          service: '080deny'
+          isSuccess: False
+          resultMessage: '본문에 수신 거부 안내 메세지가 없음'
+      -6003:
+          service: '080deny'
+          isSuccess: False
+          resultMessage: '수신 거부 번호가 사용되고 있지 않음'
+      -7000:
+          service: 'tag'
+          isSuccess: False
+          resultMessage: '태그 내부 오류(API 호출 실패)'
+      -7001:
+          service: 'tag'
+          isSuccess: False
+          resultMessage: '유효하지 않는 파라미터'
+      -7002:
+          service: 'tag'
+          isSuccess: False
+          resultMessage: 'csv 읽기 실패'
+      -9996:
+          service: 'generic'
+          isSuccess: False
+          resultMessage: '프로젝트에 포함되지 않는 멤버'
+
