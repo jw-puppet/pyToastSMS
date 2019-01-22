@@ -1,3 +1,5 @@
+이 레포지토리는 [jaeil-wiki/pyToastSMS](https://github.com/jaeil-wiki/pyToastSMS) 에서 포크되었습니다.
+
 # PyToastSMS
 
 Toast Cloud의 SMS Notifiation을 python3에서 쉽게 이용할 수 있는 library 입니다.
